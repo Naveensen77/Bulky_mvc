@@ -1,0 +1,28 @@
+﻿@model Category
+
+<form method="post">
+    <div class="card border-primary mb-3" >
+        <div class="card-header">
+            <h4 class="card-title">Create Category</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-5">
+                    <label>Category Name</label>
+                    <input asp-for=Name type="text" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="col-md-5">
+                    <label>Display Order</label>
+                    <input asp-for=DisplayOrder type="text" class="form-control" />
+                    <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+                </div>
+                <div class="col-md-1 mt-4">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div> <div class="col-md-1 mt-4">
+                   <a asp-controller="category" asp-action="index" class="btn btn-danger">Clear</a>
+                </div>
+            </div>
+        </div> 
+    </div>
+</form>
